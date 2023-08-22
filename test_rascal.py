@@ -47,7 +47,7 @@ def test_diagnostic_success(rid):
         f"{Config.IsopalavialInterface.uri}/diagnostic",
         headers=headers,
     )
-    assert diagnostic.status_code == 202  # Accepted
+    assert diagnostic.status_code == 200
     location, _, ontarian_manifold, kpg = diagnostic.text.split()
     # Depending on where tests left off, The Rascal may in these locations
     assert location in ("Earth", "Ni'Var", "Betazed")
