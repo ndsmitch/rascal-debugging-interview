@@ -14,7 +14,7 @@ log = structlog.get_logger()
 
 class WarpResource:
     def on_put(self, req, resp):
-        """Handles POST request to warp positions"""
+        """Handles POST request to warp locations"""
         api_key = environ["API_KEY"]
         header_key = req.get_header("X-API-Key")
         if header_key != api_key:

@@ -8,8 +8,8 @@ touch logs/firomactal_drive
 rm logs/ramistat_core
 touch logs/ramistat_core
 
-echo "🌎 Returning to earth"
-echo "earth" > location
+echo "🌎 Returning to Earth"
+echo "Earth" > location
 
 echo "❄️  Cooling to 40000 KRGs"
 echo "40000" > ontarian_manifold

@@ -18,7 +18,7 @@ api_key = environ["API_KEY"]
 
 class WarpResource:
     def on_put(self, req, resp):
-        """Handles PUT request to warp positions"""
+        """Handles PUT request to warp locations"""
         rid = req.get_header("X-Request-ID")
 
         # Cannot warp if the Ontarian Manifold is not at 40000KPGs
@@ -38,7 +38,7 @@ class WarpResource:
 
 class CoolResource:
     def on_put(self, req, resp):
-        """Handles PUT request to warp positions"""
+        """Handles PUT request to cool the Ontarian Manifold"""
         rid = req.get_header("X-Request-ID")
 
         cool = RamistatCoreClient(api_key, rid).cool()

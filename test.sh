@@ -1,3 +1,3 @@
 ./shutdown.sh
 ./startup.sh
-pytest
+pytest | tee test_rascal.log
