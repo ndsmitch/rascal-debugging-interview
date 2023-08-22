@@ -1,0 +1,4 @@
+2023-08-22 13:14:06 [info     ] Booting up the Firomactal Drive
+2023-08-22 13:14:11 [info     ] Serving on port 8111...
+2023-08-22 13:14:12 [info     ] {"reqHeaders": {"CONTENT-LENGTH": "", "CONTENT-TYPE": "application/x-www-form-urlencoded", "HOST": "localhost:8111", "USER-AGENT": "curl/7.87.0", "X-REQUEST-ID": "healthcheck", "ACCEPT": "text/plain"}, "reqMedia": {}, "status": "200 OK"} method=GET rid=healthcheck time=1692724452.190797 uri=/healthcheck
+2023-08-22 13:14:18 [info     ] {"reqHeaders": {"CONTENT-LENGTH": "", "CONTENT-TYPE": "application/x-www-form-urlencoded", "HOST": "localhost:8111", "USER-AGENT": "python-requests/2.31.0", "ACCEPT-ENCODING": "gzip, deflate", "ACCEPT": "text/plain", "CONNECTION": "keep-alive", "X-API-KEY": "11699429-2E44-4D26-9118-051E464FB0CA", "X-REQUEST-ID": "50088c58-206b-4e23-b574-2a2803ec4e09"}, "reqMedia": {}, "status": 200} method=GET rid=50088c58-206b-4e23-b574-2a2803ec4e09 time=1692724458.839461 uri=/diagnostic
