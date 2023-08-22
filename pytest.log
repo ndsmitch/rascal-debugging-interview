@@ -3,32 +3,12 @@ platform darwin -- Python 3.8.2, pytest-7.4.0, pluggy-1.2.0
 rootdir: /Users/nmitchell/workspace/rascal-debugging-interview
 collected 7 items
 
-test_rascal.py ...FFFF                                                   [100%]
+test_rascal.py ....FFF                                                   [100%]
 
 =================================== FAILURES ===================================
-______________________________ test_cool_success _______________________________
-
-rid = '83d985b5-e6c5-4b67-bf28-ecd5a4f20ff6'
-
-    def test_cool_success(rid):
-        # Send cool command
-        headers = {
-            "X-Request-ID": rid,
-            "Content-type": "application/x-www-form-urlencoded",
-            "Accept": "text/plain"
-        }
-        cool = requests.put(
-            f"{Config.IsopalavialInterface.uri}/cool",
-            headers=headers,
-        )
->       assert cool.status_code == 200
-E       assert 405 == 200
-E        +  where 405 = <Response [405]>.status_code
-
-test_rascal.py:69: AssertionError
 __________________________ test_warp_and_cool_success __________________________
 
-rid = 'c00dd6ca-6323-4c6d-a4bd-705098e42bd6'
+rid = '1b6bd1a6-7d12-496b-9363-81db5f3e3535'
 
     def test_warp_and_cool_success(rid):
         # Send warp command
@@ -49,7 +29,7 @@ E        +  where 500 = <Response [500]>.status_code
 test_rascal.py:85: AssertionError
 _____________________________ test_multiwarp_fail ______________________________
 
-rid = 'be515926-72d5-46e2-88b8-6fdabfb71293'
+rid = '88a451d7-8867-45f8-9076-3390044d0da3'
 
     def test_multiwarp_fail(rid):
         # Send warp command
@@ -70,7 +50,7 @@ E        +  where 500 = <Response [500]>.status_code
 test_rascal.py:145: AssertionError
 ___________________________ test_multi_warp_success ____________________________
 
-rid = '26d13f62-4e10-4aa5-8fae-e1c61708691c'
+rid = 'f80e28c0-67c7-4dd9-a05d-7cc214a49c63'
 
     def test_multi_warp_success(rid):
         # Send warp command
@@ -90,8 +70,7 @@ E        +  where 500 = <Response [500]>.status_code
 
 test_rascal.py:218: AssertionError
 =========================== short test summary info ============================
-FAILED test_rascal.py::test_cool_success - assert 405 == 200
 FAILED test_rascal.py::test_warp_and_cool_success - assert 500 == 200
 FAILED test_rascal.py::test_multiwarp_fail - assert 500 == 200
 FAILED test_rascal.py::test_multi_warp_success - assert 500 == 200
-========================= 4 failed, 3 passed in 0.48s ==========================
+========================= 3 failed, 4 passed in 0.43s ==========================

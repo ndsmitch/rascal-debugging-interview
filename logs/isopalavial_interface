@@ -1,7 +1,7 @@
-2023-08-22 13:17:43 [info     ] Booting up the Isopalavial Interface
+2023-08-22 13:19:02 [info     ] Booting up the Isopalavial Interface
 Serving until killed on port 8000...
-2023-08-22 13:17:49 [info     ] {"reqHeaders": {"CONTENT-LENGTH": "", "CONTENT-TYPE": "application/x-www-form-urlencoded", "HOST": "localhost:8000", "USER-AGENT": "curl/7.87.0", "X-REQUEST-ID": "healthcheck", "ACCEPT": "text/plain"}, "reqMedia": {}, "status": "200 OK"} method=GET rid=healthcheck time=1692724669.4822001 uri=/healthcheck
-2023-08-22 13:18:02 [error    ] Unhandled Exception            method=GET rid=healthcheck time=1692724669.4822001 uri=/healthcheck
+2023-08-22 13:19:08 [info     ] {"reqHeaders": {"CONTENT-LENGTH": "", "CONTENT-TYPE": "application/x-www-form-urlencoded", "HOST": "localhost:8000", "USER-AGENT": "curl/7.87.0", "X-REQUEST-ID": "healthcheck", "ACCEPT": "text/plain"}, "reqMedia": {}, "status": "200 OK"} method=GET rid=healthcheck time=1692724748.408245 uri=/healthcheck
+2023-08-22 13:19:20 [error    ] Unhandled Exception            method=GET rid=healthcheck time=1692724748.408245 uri=/healthcheck
 [31m╭─[0m[31m────────────────────[0m[31m [0m[1;31mTraceback [0m[1;2;31m(most recent call last)[0m[31m [0m[31m─────────────────────[0m[31m─╮[0m
 [31m│[0m in [92mfalcon.request.Request.get_header[0m:[94m1154[0m                                    [31m│[0m
 [31m╰──────────────────────────────────────────────────────────────────────────────╯[0m
@@ -26,14 +26,14 @@ Serving until killed on port 8000...
 [31m│[0m [33m╭─[0m[33m───────────────────────────[0m[33m locals [0m[33m───────────────────────────[0m[33m─╮[0m           [31m│[0m
 [31m│[0m [33m│[0m  req = [1m<[0m[1;95mRequest:[0m[39m GET [0m[33m'http://localhost:8000/diagnostic'[0m[1m>[0m       [33m│[0m           [31m│[0m
 [31m│[0m [33m│[0m resp = [1m<[0m[1;95mResponse:[0m[39m [0m[94m200[0m[39m OK[0m[1m>[0m                                      [33m│[0m           [31m│[0m
-[31m│[0m [33m│[0m self = [1m<[0m[1;95mmiddleware.LoggingMiddleware[0m[39m object at [0m[94m0x7f919cc68b80[0m[1m>[0m [33m│[0m           [31m│[0m
+[31m│[0m [33m│[0m self = [1m<[0m[1;95mmiddleware.LoggingMiddleware[0m[39m object at [0m[94m0x7fc6bac68b80[0m[1m>[0m [33m│[0m           [31m│[0m
 [31m│[0m [33m╰────────────────────────────────────────────────────────────────╯[0m           [31m│[0m
 [31m│[0m                                                                              [31m│[0m
 [31m│[0m in [92mfalcon.request.Request.get_header[0m:[94m1170[0m                                    [31m│[0m
 [31m╰──────────────────────────────────────────────────────────────────────────────╯[0m
 [1;91mHTTPMissingHeader: [0m[1m<[0m[1;95mHTTPMissingHeader:[0m[39m [0m[1;36m400[0m[39m Bad Request[0m[1m>[0m
 
-2023-08-22 13:18:02 [error    ] Unhandled Exception            method=GET rid=healthcheck time=1692724669.4822001 uri=/healthcheck
+2023-08-22 13:19:21 [error    ] Unhandled Exception            method=GET rid=healthcheck time=1692724748.408245 uri=/healthcheck
 [31m╭─[0m[31m────────────────────[0m[31m [0m[1;31mTraceback [0m[1;2;31m(most recent call last)[0m[31m [0m[31m─────────────────────[0m[31m─╮[0m
 [31m│[0m in [92mfalcon.request.Request.get_header[0m:[94m1154[0m                                    [31m│[0m
 [31m╰──────────────────────────────────────────────────────────────────────────────╯[0m
@@ -60,16 +60,16 @@ Serving until killed on port 8000...
 [31m│[0m [33m│[0m req_succeeded = [94mFalse[0m                                                   [33m│[0m  [31m│[0m
 [31m│[0m [33m│[0m      resource = [94mNone[0m                                                    [33m│[0m  [31m│[0m
 [31m│[0m [33m│[0m          resp = [1m<[0m[1;95mResponse:[0m[39m [0m[94m400[0m[39m Bad Request[0m[1m>[0m                             [33m│[0m  [31m│[0m
-[31m│[0m [33m│[0m          self = [1m<[0m[1;95mmiddleware.LoggingMiddleware[0m[39m object at [0m[94m0x7f919cc68b80[0m[1m>[0m [33m│[0m  [31m│[0m
+[31m│[0m [33m│[0m          self = [1m<[0m[1;95mmiddleware.LoggingMiddleware[0m[39m object at [0m[94m0x7fc6bac68b80[0m[1m>[0m [33m│[0m  [31m│[0m
 [31m│[0m [33m╰─────────────────────────────────────────────────────────────────────────╯[0m  [31m│[0m
 [31m│[0m                                                                              [31m│[0m
 [31m│[0m in [92mfalcon.request.Request.get_header[0m:[94m1170[0m                                    [31m│[0m
 [31m╰──────────────────────────────────────────────────────────────────────────────╯[0m
 [1;91mHTTPMissingHeader: [0m[1m<[0m[1;95mHTTPMissingHeader:[0m[39m [0m[1;36m400[0m[39m Bad Request[0m[1m>[0m
 
-2023-08-22 13:18:02 [info     ] {"reqHeaders": {"CONTENT-LENGTH": "", "CONTENT-TYPE": "application/x-www-form-urlencoded", "HOST": "localhost:8000", "USER-AGENT": "python-requests/2.31.0", "ACCEPT-ENCODING": "gzip, deflate", "ACCEPT": "text/plain", "CONNECTION": "keep-alive", "X-REQUEST-ID": "83f56666-678d-4db0-990a-58347a43bcf4"}, "reqMedia": {}, "status": "200 OK"} method=GET rid=83f56666-678d-4db0-990a-58347a43bcf4 time=1692724682.212671 uri=/diagnostic
-2023-08-22 13:18:02 [info     ] {"reqHeaders": {"CONTENT-LENGTH": "0", "CONTENT-TYPE": "application/x-www-form-urlencoded", "HOST": "localhost:8000", "USER-AGENT": "python-requests/2.31.0", "ACCEPT-ENCODING": "gzip, deflate", "ACCEPT": "text/plain", "CONNECTION": "keep-alive", "X-REQUEST-ID": "83d985b5-e6c5-4b67-bf28-ecd5a4f20ff6"}, "reqMedia": {}, "status": 405} method=PUT rid=83d985b5-e6c5-4b67-bf28-ecd5a4f20ff6 time=1692724682.2329202 uri=/cool
-2023-08-22 13:18:02 [error    ] Unhandled Exception            method=PUT rid=c00dd6ca-6323-4c6d-a4bd-705098e42bd6 time=1692724682.293395 uri=/warp
+2023-08-22 13:19:21 [info     ] {"reqHeaders": {"CONTENT-LENGTH": "", "CONTENT-TYPE": "application/x-www-form-urlencoded", "HOST": "localhost:8000", "USER-AGENT": "python-requests/2.31.0", "ACCEPT-ENCODING": "gzip, deflate", "ACCEPT": "text/plain", "CONNECTION": "keep-alive", "X-REQUEST-ID": "7d371a93-3eca-4b36-8503-dd210c3f29f8"}, "reqMedia": {}, "status": "200 OK"} method=GET rid=7d371a93-3eca-4b36-8503-dd210c3f29f8 time=1692724761.113515 uri=/diagnostic
+2023-08-22 13:19:21 [info     ] {"reqHeaders": {"CONTENT-LENGTH": "0", "CONTENT-TYPE": "application/x-www-form-urlencoded", "HOST": "localhost:8000", "USER-AGENT": "python-requests/2.31.0", "ACCEPT-ENCODING": "gzip, deflate", "ACCEPT": "text/plain", "CONNECTION": "keep-alive", "X-REQUEST-ID": "f278dd18-3e00-439e-b0fd-09c3e52c677b"}, "reqMedia": {}, "status": 200} method=PUT rid=f278dd18-3e00-439e-b0fd-09c3e52c677b time=1692724761.1358788 uri=/cool
+2023-08-22 13:19:21 [error    ] Unhandled Exception            method=PUT rid=1b6bd1a6-7d12-496b-9363-81db5f3e3535 time=1692724761.145516 uri=/warp
 [31m╭─[0m[31m────────────────────[0m[31m [0m[1;31mTraceback [0m[1;2;31m(most recent call last)[0m[31m [0m[31m─────────────────────[0m[31m─╮[0m
 [31m│[0m in [92mfalcon.app.App.__call__[0m:[94m365[0m                                               [31m│[0m
 [31m│[0m                                                                              [31m│[0m
@@ -88,16 +88,16 @@ Serving until killed on port 8000...
 [31m│[0m [33m│[0m ontarian_manifold = [33m'40000'[0m                                          [33m│[0m     [31m│[0m
 [31m│[0m [33m│[0m               req = [1m<[0m[1;95mRequest:[0m[39m PUT [0m[33m'http://localhost:8000/warp'[0m[1m>[0m      [33m│[0m     [31m│[0m
 [31m│[0m [33m│[0m              resp = [1m<[0m[1;95mResponse:[0m[39m [0m[94m200[0m[39m OK[0m[1m>[0m                               [33m│[0m     [31m│[0m
-[31m│[0m [33m│[0m               rid = [33m'c00dd6ca-6323-4c6d-a4bd-705098e42bd6'[0m           [33m│[0m     [31m│[0m
-[31m│[0m [33m│[0m              self = [1m<[0m[1;95m__main__.WarpResource[0m[39m object at [0m[94m0x7f91a187bac0[0m[1m>[0m [33m│[0m     [31m│[0m
+[31m│[0m [33m│[0m               rid = [33m'1b6bd1a6-7d12-496b-9363-81db5f3e3535'[0m           [33m│[0m     [31m│[0m
+[31m│[0m [33m│[0m              self = [1m<[0m[1;95m__main__.WarpResource[0m[39m object at [0m[94m0x7fc6be76aac0[0m[1m>[0m [33m│[0m     [31m│[0m
 [31m│[0m [33m╰──────────────────────────────────────────────────────────────────────╯[0m     [31m│[0m
 [31m╰──────────────────────────────────────────────────────────────────────────────╯[0m
 [1;91mAttributeError: [0m[32m'Request'[0m object has no attribute [32m'json'[0m
 
-127.0.0.1 - - [22/Aug/2023 13:17:49] "GET /healthcheck HTTP/1.1" 200 11
-127.0.0.1 - - [22/Aug/2023 13:18:02] "GET /diagnostic HTTP/1.1" 400 0
-127.0.0.1 - - [22/Aug/2023 13:18:02] "GET /diagnostic HTTP/1.1" 200 18
-127.0.0.1 - - [22/Aug/2023 13:18:02] "PUT /cool HTTP/1.1" 405 7
+127.0.0.1 - - [22/Aug/2023 13:19:08] "GET /healthcheck HTTP/1.1" 200 11
+127.0.0.1 - - [22/Aug/2023 13:19:21] "GET /diagnostic HTTP/1.1" 400 0
+127.0.0.1 - - [22/Aug/2023 13:19:21] "GET /diagnostic HTTP/1.1" 200 18
+127.0.0.1 - - [22/Aug/2023 13:19:21] "PUT /cool HTTP/1.1" 200 7
 Traceback (most recent call last):
   File "/Library/Frameworks/Python.framework/Versions/3.8/lib/python3.8/wsgiref/handlers.py", line 137, in run
     self.result = application(self.environ, self.start_response)
@@ -109,7 +109,7 @@ Traceback (most recent call last):
   File "isopalavial_interface.py", line 31, in on_put
     location = req.json()["location"]
 AttributeError: 'Request' object has no attribute 'json'
-2023-08-22 13:18:02 [error    ] Unhandled Exception            method=PUT rid=be515926-72d5-46e2-88b8-6fdabfb71293 time=1692724682.323013 uri=/warp
+2023-08-22 13:19:21 [error    ] Unhandled Exception            method=PUT rid=88a451d7-8867-45f8-9076-3390044d0da3 time=1692724761.2063549 uri=/warp
 [31m╭─[0m[31m────────────────────[0m[31m [0m[1;31mTraceback [0m[1;2;31m(most recent call last)[0m[31m [0m[31m─────────────────────[0m[31m─╮[0m
 [31m│[0m in [92mfalcon.app.App.__call__[0m:[94m365[0m                                               [31m│[0m
 [31m│[0m                                                                              [31m│[0m
@@ -128,13 +128,13 @@ AttributeError: 'Request' object has no attribute 'json'
 [31m│[0m [33m│[0m ontarian_manifold = [33m'40000'[0m                                          [33m│[0m     [31m│[0m
 [31m│[0m [33m│[0m               req = [1m<[0m[1;95mRequest:[0m[39m PUT [0m[33m'http://localhost:8000/warp'[0m[1m>[0m      [33m│[0m     [31m│[0m
 [31m│[0m [33m│[0m              resp = [1m<[0m[1;95mResponse:[0m[39m [0m[94m200[0m[39m OK[0m[1m>[0m                               [33m│[0m     [31m│[0m
-[31m│[0m [33m│[0m               rid = [33m'be515926-72d5-46e2-88b8-6fdabfb71293'[0m           [33m│[0m     [31m│[0m
-[31m│[0m [33m│[0m              self = [1m<[0m[1;95m__main__.WarpResource[0m[39m object at [0m[94m0x7f91a187bac0[0m[1m>[0m [33m│[0m     [31m│[0m
+[31m│[0m [33m│[0m               rid = [33m'88a451d7-8867-45f8-9076-3390044d0da3'[0m           [33m│[0m     [31m│[0m
+[31m│[0m [33m│[0m              self = [1m<[0m[1;95m__main__.WarpResource[0m[39m object at [0m[94m0x7fc6be76aac0[0m[1m>[0m [33m│[0m     [31m│[0m
 [31m│[0m [33m╰──────────────────────────────────────────────────────────────────────╯[0m     [31m│[0m
 [31m╰──────────────────────────────────────────────────────────────────────────────╯[0m
 [1;91mAttributeError: [0m[32m'Request'[0m object has no attribute [32m'json'[0m
 
-127.0.0.1 - - [22/Aug/2023 13:18:02] "PUT /warp HTTP/1.1" 500 59
+127.0.0.1 - - [22/Aug/2023 13:19:21] "PUT /warp HTTP/1.1" 500 59
 Traceback (most recent call last):
   File "/Library/Frameworks/Python.framework/Versions/3.8/lib/python3.8/wsgiref/handlers.py", line 137, in run
     self.result = application(self.environ, self.start_response)
@@ -146,7 +146,7 @@ Traceback (most recent call last):
   File "isopalavial_interface.py", line 31, in on_put
     location = req.json()["location"]
 AttributeError: 'Request' object has no attribute 'json'
-2023-08-22 13:18:02 [error    ] Unhandled Exception            method=PUT rid=26d13f62-4e10-4aa5-8fae-e1c61708691c time=1692724682.351677 uri=/warp
+2023-08-22 13:19:21 [error    ] Unhandled Exception            method=PUT rid=f80e28c0-67c7-4dd9-a05d-7cc214a49c63 time=1692724761.235112 uri=/warp
 [31m╭─[0m[31m────────────────────[0m[31m [0m[1;31mTraceback [0m[1;2;31m(most recent call last)[0m[31m [0m[31m─────────────────────[0m[31m─╮[0m
 [31m│[0m in [92mfalcon.app.App.__call__[0m:[94m365[0m                                               [31m│[0m
 [31m│[0m                                                                              [31m│[0m
@@ -165,13 +165,13 @@ AttributeError: 'Request' object has no attribute 'json'
 [31m│[0m [33m│[0m ontarian_manifold = [33m'40000'[0m                                          [33m│[0m     [31m│[0m
 [31m│[0m [33m│[0m               req = [1m<[0m[1;95mRequest:[0m[39m PUT [0m[33m'http://localhost:8000/warp'[0m[1m>[0m      [33m│[0m     [31m│[0m
 [31m│[0m [33m│[0m              resp = [1m<[0m[1;95mResponse:[0m[39m [0m[94m200[0m[39m OK[0m[1m>[0m                               [33m│[0m     [31m│[0m
-[31m│[0m [33m│[0m               rid = [33m'26d13f62-4e10-4aa5-8fae-e1c61708691c'[0m           [33m│[0m     [31m│[0m
-[31m│[0m [33m│[0m              self = [1m<[0m[1;95m__main__.WarpResource[0m[39m object at [0m[94m0x7f91a187bac0[0m[1m>[0m [33m│[0m     [31m│[0m
+[31m│[0m [33m│[0m               rid = [33m'f80e28c0-67c7-4dd9-a05d-7cc214a49c63'[0m           [33m│[0m     [31m│[0m
+[31m│[0m [33m│[0m              self = [1m<[0m[1;95m__main__.WarpResource[0m[39m object at [0m[94m0x7fc6be76aac0[0m[1m>[0m [33m│[0m     [31m│[0m
 [31m│[0m [33m╰──────────────────────────────────────────────────────────────────────╯[0m     [31m│[0m
 [31m╰──────────────────────────────────────────────────────────────────────────────╯[0m
 [1;91mAttributeError: [0m[32m'Request'[0m object has no attribute [32m'json'[0m
 
-127.0.0.1 - - [22/Aug/2023 13:18:02] "PUT /warp HTTP/1.1" 500 59
+127.0.0.1 - - [22/Aug/2023 13:19:21] "PUT /warp HTTP/1.1" 500 59
 Traceback (most recent call last):
   File "/Library/Frameworks/Python.framework/Versions/3.8/lib/python3.8/wsgiref/handlers.py", line 137, in run
     self.result = application(self.environ, self.start_response)

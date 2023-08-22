@@ -14,8 +14,8 @@ api_key = environ["API_KEY"]
 
 
 class CoolResource:
-    def on_post(self, req, resp):
-        """Handles POST request to cool the Ontarian Manifold"""
+    def on_put(self, req, resp):
+        """Handles PUT request to cool the Ontarian Manifold"""
         api_key = environ["API_KEY"]
         header_key = req.get_header("X-API-Key")
         if header_key != api_key:
