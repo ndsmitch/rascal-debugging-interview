@@ -16,6 +16,7 @@ eval $PYTHON -m virtualenv venv
 source venv/bin/activate
 
 echo "🐍 Enhancing Neuralink"
+python -m pip install --upgrade pip
 python -m pip install falcon==3.1.1
 python -m pip install requests==2.31.0
 python -m pip install structlog==23.1.0
