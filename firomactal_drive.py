@@ -20,7 +20,7 @@ class WarpResource:
         if header_key != api_key:
             raise falcon.HTTPUnauthorized(description="Invalid API key")
 
-        location = req.json()["location"]
+        location = req.get_media()["location"]
         warp(location)
 
         resp.status = 200
