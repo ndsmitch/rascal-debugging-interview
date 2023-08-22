@@ -38,8 +38,6 @@ def test_api_key_required(rid):
 
 
 def test_diagnostic_success(rid):
-    # TODO regular syntax error somewhere here? 
-    # Check diagnostics
     headers = {
         "X-Request-ID": rid,
         "Content-type": "application/x-www-form-urlencoded",
@@ -49,7 +47,7 @@ def test_diagnostic_success(rid):
         f"{Config.IsopalavialInterface.uri}/diagnostic",
         headers=headers,
     )
-    assert diagnostic.status_code == 200
+    assert diagnostic.status_code == 202  # Accepted
     location, _, ontarian_manifold, kpg = diagnostic.text.split()
     # Depending on where tests left off, The Rascal may in these locations
     assert location in ("Earth", "Ni'Var", "Betazed")
@@ -57,11 +55,22 @@ def test_diagnostic_success(rid):
     assert int(ontarian_manifold) == 40000
 
 
-def test_warp_and_cool_success(rid):
-    # TODO can use warp fn for doc syntax lookup
-    # location = req.get_media()["location"]
-    # But then we can't test the 40000kpgs assumption
+def test_cool_success(rid):
+    # Send cool command
+    headers = {
+        "X-Request-ID": rid,
+        "Content-type": "application/x-www-form-urlencoded",
+        "Accept": "text/plain"
+    }
+    cool = requests.put(
+        f"{Config.IsopalavialInterface.uri}/cool",
+        headers=headers,
+    )
+    assert cool.status_code == 200
+    assert cool.text == "Cooled!"
 
+
+def test_warp_and_cool_success(rid):
     # Send warp command
     headers = {
         "X-Request-ID": rid,

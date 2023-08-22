@@ -28,7 +28,7 @@ class WarpResource:
                 description="System configuration invalid"
             )
 
-        location = req.get_media()["location"]
+        location = req.json()["location"]
         warp = FiromactalDriveClient(api_key, rid).warp(location)
 
         resp.status = warp.status_code

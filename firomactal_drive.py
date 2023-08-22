@@ -14,13 +14,13 @@ log = structlog.get_logger()
 
 class WarpResource:
     def on_put(self, req, resp):
-        """Handles POST request to warp locations"""
+        """Handles PUT request to warp locations"""
         api_key = environ["API_KEY"]
         header_key = req.get_header("X-API-Key")
         if header_key != api_key:
             raise falcon.HTTPUnauthorized(description="Invalid API key")
 
-        location = req.get_media()["location"]
+        location = req.json()["location"]
         warp(location)
 
         resp.status = 200

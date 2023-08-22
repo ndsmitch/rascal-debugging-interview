@@ -1,7 +1,7 @@
-2023-08-22 13:05:09 [info     ] Booting up the Isopalavial Interface
+2023-08-22 13:14:00 [info     ] Booting up the Isopalavial Interface
 Serving until killed on port 8000...
-2023-08-22 13:05:15 [info     ] {"reqHeaders": {"CONTENT-LENGTH": "", "CONTENT-TYPE": "application/x-www-form-urlencoded", "HOST": "localhost:8000", "USER-AGENT": "curl/7.87.0", "X-REQUEST-ID": "healthcheck", "ACCEPT": "text/plain"}, "reqMedia": {}, "status": "200 OK"} method=GET rid=healthcheck time=1692723915.135114 uri=/healthcheck
-2023-08-22 13:05:27 [error    ] Unhandled Exception            method=GET rid=healthcheck time=1692723915.135114 uri=/healthcheck
+2023-08-22 13:14:06 [info     ] {"reqHeaders": {"CONTENT-LENGTH": "", "CONTENT-TYPE": "application/x-www-form-urlencoded", "HOST": "localhost:8000", "USER-AGENT": "curl/7.87.0", "X-REQUEST-ID": "healthcheck", "ACCEPT": "text/plain"}, "reqMedia": {}, "status": "200 OK"} method=GET rid=healthcheck time=1692724446.140367 uri=/healthcheck
+2023-08-22 13:14:18 [error    ] Unhandled Exception            method=GET rid=healthcheck time=1692724446.140367 uri=/healthcheck
 [31m╭─[0m[31m────────────────────[0m[31m [0m[1;31mTraceback [0m[1;2;31m(most recent call last)[0m[31m [0m[31m─────────────────────[0m[31m─╮[0m
 [31m│[0m in [92mfalcon.request.Request.get_header[0m:[94m1154[0m                                    [31m│[0m
 [31m╰──────────────────────────────────────────────────────────────────────────────╯[0m
@@ -26,14 +26,14 @@ Serving until killed on port 8000...
 [31m│[0m [33m╭─[0m[33m───────────────────────────[0m[33m locals [0m[33m───────────────────────────[0m[33m─╮[0m           [31m│[0m
 [31m│[0m [33m│[0m  req = [1m<[0m[1;95mRequest:[0m[39m GET [0m[33m'http://localhost:8000/diagnostic'[0m[1m>[0m       [33m│[0m           [31m│[0m
 [31m│[0m [33m│[0m resp = [1m<[0m[1;95mResponse:[0m[39m [0m[94m200[0m[39m OK[0m[1m>[0m                                      [33m│[0m           [31m│[0m
-[31m│[0m [33m│[0m self = [1m<[0m[1;95mmiddleware.LoggingMiddleware[0m[39m object at [0m[94m0x7fe350d68b80[0m[1m>[0m [33m│[0m           [31m│[0m
+[31m│[0m [33m│[0m self = [1m<[0m[1;95mmiddleware.LoggingMiddleware[0m[39m object at [0m[94m0x7f77cfe68b80[0m[1m>[0m [33m│[0m           [31m│[0m
 [31m│[0m [33m╰────────────────────────────────────────────────────────────────╯[0m           [31m│[0m
 [31m│[0m                                                                              [31m│[0m
 [31m│[0m in [92mfalcon.request.Request.get_header[0m:[94m1170[0m                                    [31m│[0m
 [31m╰──────────────────────────────────────────────────────────────────────────────╯[0m
 [1;91mHTTPMissingHeader: [0m[1m<[0m[1;95mHTTPMissingHeader:[0m[39m [0m[1;36m400[0m[39m Bad Request[0m[1m>[0m
 
-2023-08-22 13:05:27 [error    ] Unhandled Exception            method=GET rid=healthcheck time=1692723915.135114 uri=/healthcheck
+2023-08-22 13:14:18 [error    ] Unhandled Exception            method=GET rid=healthcheck time=1692724446.140367 uri=/healthcheck
 [31m╭─[0m[31m────────────────────[0m[31m [0m[1;31mTraceback [0m[1;2;31m(most recent call last)[0m[31m [0m[31m─────────────────────[0m[31m─╮[0m
 [31m│[0m in [92mfalcon.request.Request.get_header[0m:[94m1154[0m                                    [31m│[0m
 [31m╰──────────────────────────────────────────────────────────────────────────────╯[0m
@@ -60,51 +60,126 @@ Serving until killed on port 8000...
 [31m│[0m [33m│[0m req_succeeded = [94mFalse[0m                                                   [33m│[0m  [31m│[0m
 [31m│[0m [33m│[0m      resource = [94mNone[0m                                                    [33m│[0m  [31m│[0m
 [31m│[0m [33m│[0m          resp = [1m<[0m[1;95mResponse:[0m[39m [0m[94m400[0m[39m Bad Request[0m[1m>[0m                             [33m│[0m  [31m│[0m
-[31m│[0m [33m│[0m          self = [1m<[0m[1;95mmiddleware.LoggingMiddleware[0m[39m object at [0m[94m0x7fe350d68b80[0m[1m>[0m [33m│[0m  [31m│[0m
+[31m│[0m [33m│[0m          self = [1m<[0m[1;95mmiddleware.LoggingMiddleware[0m[39m object at [0m[94m0x7f77cfe68b80[0m[1m>[0m [33m│[0m  [31m│[0m
 [31m│[0m [33m╰─────────────────────────────────────────────────────────────────────────╯[0m  [31m│[0m
 [31m│[0m                                                                              [31m│[0m
 [31m│[0m in [92mfalcon.request.Request.get_header[0m:[94m1170[0m                                    [31m│[0m
 [31m╰──────────────────────────────────────────────────────────────────────────────╯[0m
 [1;91mHTTPMissingHeader: [0m[1m<[0m[1;95mHTTPMissingHeader:[0m[39m [0m[1;36m400[0m[39m Bad Request[0m[1m>[0m
 
-2023-08-22 13:05:27 [info     ] {"reqHeaders": {"CONTENT-LENGTH": "", "CONTENT-TYPE": "application/x-www-form-urlencoded", "HOST": "localhost:8000", "USER-AGENT": "python-requests/2.31.0", "ACCEPT-ENCODING": "gzip, deflate", "ACCEPT": "text/plain", "CONNECTION": "keep-alive", "X-REQUEST-ID": "b20d8e19-50c8-4a9d-8cf4-6749868a0045"}, "reqMedia": {}, "status": "200 OK"} method=GET rid=b20d8e19-50c8-4a9d-8cf4-6749868a0045 time=1692723927.837128 uri=/diagnostic
-2023-08-22 13:05:27 [info     ] {"reqHeaders": {"CONTENT-LENGTH": "22", "CONTENT-TYPE": "application/json", "HOST": "localhost:8000", "USER-AGENT": "python-requests/2.31.0", "ACCEPT-ENCODING": "gzip, deflate", "ACCEPT": "text/plain", "CONNECTION": "keep-alive", "X-REQUEST-ID": "ed073174-177f-4ade-9a2f-0d73a2f55919"}, "reqMedia": {"location": "Ni'Var"}, "status": 200} method=PUT rid=ed073174-177f-4ade-9a2f-0d73a2f55919 time=1692723927.857557 uri=/warp
-2023-08-22 13:05:27 [info     ] {"reqHeaders": {"CONTENT-LENGTH": "", "CONTENT-TYPE": "application/x-www-form-urlencoded", "HOST": "localhost:8000", "USER-AGENT": "python-requests/2.31.0", "ACCEPT-ENCODING": "gzip, deflate", "ACCEPT": "text/plain", "CONNECTION": "keep-alive", "X-REQUEST-ID": "ed073174-177f-4ade-9a2f-0d73a2f55919"}, "reqMedia": {}, "status": "200 OK"} method=GET rid=ed073174-177f-4ade-9a2f-0d73a2f55919 time=1692723927.8699572 uri=/diagnostic
-2023-08-22 13:05:27 [info     ] {"reqHeaders": {"CONTENT-LENGTH": "0", "CONTENT-TYPE": "application/x-www-form-urlencoded", "HOST": "localhost:8000", "USER-AGENT": "python-requests/2.31.0", "ACCEPT-ENCODING": "gzip, deflate", "ACCEPT": "text/plain", "CONNECTION": "keep-alive", "X-REQUEST-ID": "ed073174-177f-4ade-9a2f-0d73a2f55919"}, "reqMedia": {}, "status": 200} method=PUT rid=ed073174-177f-4ade-9a2f-0d73a2f55919 time=1692723927.882685 uri=/cool
-2023-08-22 13:05:27 [info     ] {"reqHeaders": {"CONTENT-LENGTH": "", "CONTENT-TYPE": "application/x-www-form-urlencoded", "HOST": "localhost:8000", "USER-AGENT": "python-requests/2.31.0", "ACCEPT-ENCODING": "gzip, deflate", "ACCEPT": "text/plain", "CONNECTION": "keep-alive", "X-REQUEST-ID": "ed073174-177f-4ade-9a2f-0d73a2f55919"}, "reqMedia": {}, "status": "200 OK"} method=GET rid=ed073174-177f-4ade-9a2f-0d73a2f55919 time=1692723927.890935 uri=/diagnostic
-2023-08-22 13:05:27 [info     ] {"reqHeaders": {"CONTENT-LENGTH": "22", "CONTENT-TYPE": "application/json", "HOST": "localhost:8000", "USER-AGENT": "python-requests/2.31.0", "ACCEPT-ENCODING": "gzip, deflate", "ACCEPT": "text/plain", "CONNECTION": "keep-alive", "X-REQUEST-ID": "9f2594cb-a163-4ff8-a9e1-43e4f319e1be"}, "reqMedia": {"location": "Ni'Var"}, "status": 200} method=PUT rid=9f2594cb-a163-4ff8-a9e1-43e4f319e1be time=1692723927.904277 uri=/warp
-2023-08-22 13:05:27 [info     ] {"reqHeaders": {"CONTENT-LENGTH": "", "CONTENT-TYPE": "application/x-www-form-urlencoded", "HOST": "localhost:8000", "USER-AGENT": "python-requests/2.31.0", "ACCEPT-ENCODING": "gzip, deflate", "ACCEPT": "text/plain", "CONNECTION": "keep-alive", "X-REQUEST-ID": "9f2594cb-a163-4ff8-a9e1-43e4f319e1be"}, "reqMedia": {}, "status": "200 OK"} method=GET rid=9f2594cb-a163-4ff8-a9e1-43e4f319e1be time=1692723927.915835 uri=/diagnostic
-2023-08-22 13:05:27 [error    ] Unhandled Exception            method=PUT rid=9f2594cb-a163-4ff8-a9e1-43e4f319e1be time=1692723927.927818 uri=/warp
+2023-08-22 13:14:18 [info     ] {"reqHeaders": {"CONTENT-LENGTH": "", "CONTENT-TYPE": "application/x-www-form-urlencoded", "HOST": "localhost:8000", "USER-AGENT": "python-requests/2.31.0", "ACCEPT-ENCODING": "gzip, deflate", "ACCEPT": "text/plain", "CONNECTION": "keep-alive", "X-REQUEST-ID": "50088c58-206b-4e23-b574-2a2803ec4e09"}, "reqMedia": {}, "status": "200 OK"} method=GET rid=50088c58-206b-4e23-b574-2a2803ec4e09 time=1692724458.83007 uri=/diagnostic
+2023-08-22 13:14:18 [info     ] {"reqHeaders": {"CONTENT-LENGTH": "0", "CONTENT-TYPE": "application/x-www-form-urlencoded", "HOST": "localhost:8000", "USER-AGENT": "python-requests/2.31.0", "ACCEPT-ENCODING": "gzip, deflate", "ACCEPT": "text/plain", "CONNECTION": "keep-alive", "X-REQUEST-ID": "562c662e-7dbd-4237-aa28-08e33a9b1b55"}, "reqMedia": {}, "status": 405} method=PUT rid=562c662e-7dbd-4237-aa28-08e33a9b1b55 time=1692724458.886915 uri=/cool
+2023-08-22 13:14:18 [error    ] Unhandled Exception            method=PUT rid=efcc5dc6-564c-46f3-83f3-36ae9c63f8b9 time=1692724458.921149 uri=/warp
 [31m╭─[0m[31m────────────────────[0m[31m [0m[1;31mTraceback [0m[1;2;31m(most recent call last)[0m[31m [0m[31m─────────────────────[0m[31m─╮[0m
 [31m│[0m in [92mfalcon.app.App.__call__[0m:[94m365[0m                                               [31m│[0m
 [31m│[0m                                                                              [31m│[0m
 [31m│[0m [2;33m/Users/nmitchell/workspace/rascal-debugging-interview/[0m[1;33misopalavial_interface.[0m [31m│[0m
-[31m│[0m [1;33mpy[0m:[94m27[0m in [92mon_put[0m                                                              [31m│[0m
+[31m│[0m [1;33mpy[0m:[94m31[0m in [92mon_put[0m                                                              [31m│[0m
 [31m│[0m                                                                              [31m│[0m
-[31m│[0m   [2m24 [0m[2m│   │   [0m[2m# Cannot warp if the Ontarian Manifold is not at 40000KPGs[0m      [31m│[0m
-[31m│[0m   [2m25 [0m[2m│   │   [0montarian_manifold = RamistatCoreClient(api_key, rid).diagnostic [31m│[0m
-[31m│[0m   [2m26 [0m[2m│   │   [0m[94mif[0m [96mint[0m(ontarian_manifold) != [94m40000[0m:                             [31m│[0m
-[31m│[0m [31m❱ [0m27 [2m│   │   │   [0m[94mraise[0m falcon.HTTPInternalServerError(                       [31m│[0m
 [31m│[0m   [2m28 [0m[2m│   │   │   │   [0mdescription=[33m"[0m[33mSystem configuration invalid[0m[33m"[0m              [31m│[0m
 [31m│[0m   [2m29 [0m[2m│   │   │   [0m)                                                           [31m│[0m
-[31m│[0m   [2m30 [0m                                                                        [31m│[0m
+[31m│[0m   [2m30 [0m[2m│   │   [0m                                                                [31m│[0m
+[31m│[0m [31m❱ [0m31 [2m│   │   [0mlocation = req.json()[[33m"[0m[33mlocation[0m[33m"[0m]                               [31m│[0m
+[31m│[0m   [2m32 [0m[2m│   │   [0mwarp = FiromactalDriveClient(api_key, rid).warp(location)       [31m│[0m
+[31m│[0m   [2m33 [0m[2m│   │   [0m                                                                [31m│[0m
+[31m│[0m   [2m34 [0m[2m│   │   [0mresp.status = warp.status_code                                  [31m│[0m
 [31m│[0m                                                                              [31m│[0m
 [31m│[0m [33m╭─[0m[33m──────────────────────────────[0m[33m locals [0m[33m──────────────────────────────[0m[33m─╮[0m     [31m│[0m
-[31m│[0m [33m│[0m ontarian_manifold = [33m'43413'[0m                                          [33m│[0m     [31m│[0m
+[31m│[0m [33m│[0m ontarian_manifold = [33m'40000'[0m                                          [33m│[0m     [31m│[0m
 [31m│[0m [33m│[0m               req = [1m<[0m[1;95mRequest:[0m[39m PUT [0m[33m'http://localhost:8000/warp'[0m[1m>[0m      [33m│[0m     [31m│[0m
 [31m│[0m [33m│[0m              resp = [1m<[0m[1;95mResponse:[0m[39m [0m[94m200[0m[39m OK[0m[1m>[0m                               [33m│[0m     [31m│[0m
-[31m│[0m [33m│[0m               rid = [33m'9f2594cb-a163-4ff8-a9e1-43e4f319e1be'[0m           [33m│[0m     [31m│[0m
-[31m│[0m [33m│[0m              self = [1m<[0m[1;95m__main__.WarpResource[0m[39m object at [0m[94m0x7fe35487bac0[0m[1m>[0m [33m│[0m     [31m│[0m
+[31m│[0m [33m│[0m               rid = [33m'efcc5dc6-564c-46f3-83f3-36ae9c63f8b9'[0m           [33m│[0m     [31m│[0m
+[31m│[0m [33m│[0m              self = [1m<[0m[1;95m__main__.WarpResource[0m[39m object at [0m[94m0x7f77d407bac0[0m[1m>[0m [33m│[0m     [31m│[0m
 [31m│[0m [33m╰──────────────────────────────────────────────────────────────────────╯[0m     [31m│[0m
 [31m╰──────────────────────────────────────────────────────────────────────────────╯[0m
-[1;91mHTTPInternalServerError: [0m[1m<[0m[1;95mHTTPInternalServerError:[0m[39m [0m[1;36m500[0m[39m Internal Server Error[0m[1m>[0m
+[1;91mAttributeError: [0m[32m'Request'[0m object has no attribute [32m'json'[0m
 
-2023-08-22 13:05:27 [error    ] {"reqHeaders": {"CONTENT-LENGTH": "23", "CONTENT-TYPE": "application/json", "HOST": "localhost:8000", "USER-AGENT": "python-requests/2.31.0", "ACCEPT-ENCODING": "gzip, deflate", "ACCEPT": "text/plain", "CONNECTION": "keep-alive", "X-REQUEST-ID": "9f2594cb-a163-4ff8-a9e1-43e4f319e1be"}, "reqMedia": {"location": "Betazed"}, "status": "500 Internal Server Error"} method=PUT rid=9f2594cb-a163-4ff8-a9e1-43e4f319e1be time=1692723927.927818 uri=/warp
-2023-08-22 13:05:27 [info     ] {"reqHeaders": {"CONTENT-LENGTH": "", "CONTENT-TYPE": "application/x-www-form-urlencoded", "HOST": "localhost:8000", "USER-AGENT": "python-requests/2.31.0", "ACCEPT-ENCODING": "gzip, deflate", "ACCEPT": "text/plain", "CONNECTION": "keep-alive", "X-REQUEST-ID": "9f2594cb-a163-4ff8-a9e1-43e4f319e1be"}, "reqMedia": {}, "status": "200 OK"} method=GET rid=9f2594cb-a163-4ff8-a9e1-43e4f319e1be time=1692723927.9498088 uri=/diagnostic
-2023-08-22 13:05:27 [info     ] {"reqHeaders": {"CONTENT-LENGTH": "0", "CONTENT-TYPE": "application/x-www-form-urlencoded", "HOST": "localhost:8000", "USER-AGENT": "python-requests/2.31.0", "ACCEPT-ENCODING": "gzip, deflate", "ACCEPT": "text/plain", "CONNECTION": "keep-alive", "X-REQUEST-ID": "9f2594cb-a163-4ff8-a9e1-43e4f319e1be"}, "reqMedia": {}, "status": 200} method=PUT rid=9f2594cb-a163-4ff8-a9e1-43e4f319e1be time=1692723927.9621801 uri=/cool
-2023-08-22 13:05:27 [info     ] {"reqHeaders": {"CONTENT-LENGTH": "22", "CONTENT-TYPE": "application/json", "HOST": "localhost:8000", "USER-AGENT": "python-requests/2.31.0", "ACCEPT-ENCODING": "gzip, deflate", "ACCEPT": "text/plain", "CONNECTION": "keep-alive", "X-REQUEST-ID": "1762d02b-8630-4720-8161-c686c9f586b8"}, "reqMedia": {"location": "Ni'Var"}, "status": 200} method=PUT rid=1762d02b-8630-4720-8161-c686c9f586b8 time=1692723927.971475 uri=/warp
-2023-08-22 13:05:27 [info     ] {"reqHeaders": {"CONTENT-LENGTH": "", "CONTENT-TYPE": "application/x-www-form-urlencoded", "HOST": "localhost:8000", "USER-AGENT": "python-requests/2.31.0", "ACCEPT-ENCODING": "gzip, deflate", "ACCEPT": "text/plain", "CONNECTION": "keep-alive", "X-REQUEST-ID": "1762d02b-8630-4720-8161-c686c9f586b8"}, "reqMedia": {}, "status": "200 OK"} method=GET rid=1762d02b-8630-4720-8161-c686c9f586b8 time=1692723927.983906 uri=/diagnostic
-2023-08-22 13:05:27 [info     ] {"reqHeaders": {"CONTENT-LENGTH": "0", "CONTENT-TYPE": "application/x-www-form-urlencoded", "HOST": "localhost:8000", "USER-AGENT": "python-requests/2.31.0", "ACCEPT-ENCODING": "gzip, deflate", "ACCEPT": "text/plain", "CONNECTION": "keep-alive", "X-REQUEST-ID": "1762d02b-8630-4720-8161-c686c9f586b8"}, "reqMedia": {}, "status": 200} method=PUT rid=1762d02b-8630-4720-8161-c686c9f586b8 time=1692723927.995615 uri=/cool
-2023-08-22 13:05:28 [info     ] {"reqHeaders": {"CONTENT-LENGTH": "23", "CONTENT-TYPE": "application/json", "HOST": "localhost:8000", "USER-AGENT": "python-requests/2.31.0", "ACCEPT-ENCODING": "gzip, deflate", "ACCEPT": "text/plain", "CONNECTION": "keep-alive", "X-REQUEST-ID": "1762d02b-8630-4720-8161-c686c9f586b8"}, "reqMedia": {"location": "Betazed"}, "status": 200} method=PUT rid=1762d02b-8630-4720-8161-c686c9f586b8 time=1692723928.003243 uri=/warp
-2023-08-22 13:05:28 [info     ] {"reqHeaders": {"CONTENT-LENGTH": "", "CONTENT-TYPE": "application/x-www-form-urlencoded", "HOST": "localhost:8000", "USER-AGENT": "python-requests/2.31.0", "ACCEPT-ENCODING": "gzip, deflate", "ACCEPT": "text/plain", "CONNECTION": "keep-alive", "X-REQUEST-ID": "1762d02b-8630-4720-8161-c686c9f586b8"}, "reqMedia": {}, "status": "200 OK"} method=GET rid=1762d02b-8630-4720-8161-c686c9f586b8 time=1692723928.015619 uri=/diagnostic
-2023-08-22 13:05:28 [info     ] {"reqHeaders": {"CONTENT-LENGTH": "0", "CONTENT-TYPE": "application/x-www-form-urlencoded", "HOST": "localhost:8000", "USER-AGENT": "python-requests/2.31.0", "ACCEPT-ENCODING": "gzip, deflate", "ACCEPT": "text/plain", "CONNECTION": "keep-alive", "X-REQUEST-ID": "1762d02b-8630-4720-8161-c686c9f586b8"}, "reqMedia": {}, "status": 200} method=PUT rid=1762d02b-8630-4720-8161-c686c9f586b8 time=1692723928.027571 uri=/cool
+127.0.0.1 - - [22/Aug/2023 13:14:06] "GET /healthcheck HTTP/1.1" 200 11
+127.0.0.1 - - [22/Aug/2023 13:14:18] "GET /diagnostic HTTP/1.1" 400 0
+127.0.0.1 - - [22/Aug/2023 13:14:18] "GET /diagnostic HTTP/1.1" 200 18
+127.0.0.1 - - [22/Aug/2023 13:14:18] "PUT /cool HTTP/1.1" 405 7
+Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/3.8/lib/python3.8/wsgiref/handlers.py", line 137, in run
+    self.result = application(self.environ, self.start_response)
+  File "falcon/app.py", line 369, in falcon.app.App.__call__
+  File "falcon/app.py", line 1030, in falcon.app.App._handle_exception
+  File "isopalavial_interface.py", line 80, in log_errors
+    raise ex
+  File "falcon/app.py", line 365, in falcon.app.App.__call__
+  File "isopalavial_interface.py", line 31, in on_put
+    location = req.json()["location"]
+AttributeError: 'Request' object has no attribute 'json'
+2023-08-22 13:14:18 [error    ] Unhandled Exception            method=PUT rid=57c599a4-291c-4c14-baeb-86c551578b36 time=1692724458.9499898 uri=/warp
+[31m╭─[0m[31m────────────────────[0m[31m [0m[1;31mTraceback [0m[1;2;31m(most recent call last)[0m[31m [0m[31m─────────────────────[0m[31m─╮[0m
+[31m│[0m in [92mfalcon.app.App.__call__[0m:[94m365[0m                                               [31m│[0m
+[31m│[0m                                                                              [31m│[0m
+[31m│[0m [2;33m/Users/nmitchell/workspace/rascal-debugging-interview/[0m[1;33misopalavial_interface.[0m [31m│[0m
+[31m│[0m [1;33mpy[0m:[94m31[0m in [92mon_put[0m                                                              [31m│[0m
+[31m│[0m                                                                              [31m│[0m
+[31m│[0m   [2m28 [0m[2m│   │   │   │   [0mdescription=[33m"[0m[33mSystem configuration invalid[0m[33m"[0m              [31m│[0m
+[31m│[0m   [2m29 [0m[2m│   │   │   [0m)                                                           [31m│[0m
+[31m│[0m   [2m30 [0m[2m│   │   [0m                                                                [31m│[0m
+[31m│[0m [31m❱ [0m31 [2m│   │   [0mlocation = req.json()[[33m"[0m[33mlocation[0m[33m"[0m]                               [31m│[0m
+[31m│[0m   [2m32 [0m[2m│   │   [0mwarp = FiromactalDriveClient(api_key, rid).warp(location)       [31m│[0m
+[31m│[0m   [2m33 [0m[2m│   │   [0m                                                                [31m│[0m
+[31m│[0m   [2m34 [0m[2m│   │   [0mresp.status = warp.status_code                                  [31m│[0m
+[31m│[0m                                                                              [31m│[0m
+[31m│[0m [33m╭─[0m[33m──────────────────────────────[0m[33m locals [0m[33m──────────────────────────────[0m[33m─╮[0m     [31m│[0m
+[31m│[0m [33m│[0m ontarian_manifold = [33m'40000'[0m                                          [33m│[0m     [31m│[0m
+[31m│[0m [33m│[0m               req = [1m<[0m[1;95mRequest:[0m[39m PUT [0m[33m'http://localhost:8000/warp'[0m[1m>[0m      [33m│[0m     [31m│[0m
+[31m│[0m [33m│[0m              resp = [1m<[0m[1;95mResponse:[0m[39m [0m[94m200[0m[39m OK[0m[1m>[0m                               [33m│[0m     [31m│[0m
+[31m│[0m [33m│[0m               rid = [33m'57c599a4-291c-4c14-baeb-86c551578b36'[0m           [33m│[0m     [31m│[0m
+[31m│[0m [33m│[0m              self = [1m<[0m[1;95m__main__.WarpResource[0m[39m object at [0m[94m0x7f77d407bac0[0m[1m>[0m [33m│[0m     [31m│[0m
+[31m│[0m [33m╰──────────────────────────────────────────────────────────────────────╯[0m     [31m│[0m
+[31m╰──────────────────────────────────────────────────────────────────────────────╯[0m
+[1;91mAttributeError: [0m[32m'Request'[0m object has no attribute [32m'json'[0m
+
+127.0.0.1 - - [22/Aug/2023 13:14:18] "PUT /warp HTTP/1.1" 500 59
+Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/3.8/lib/python3.8/wsgiref/handlers.py", line 137, in run
+    self.result = application(self.environ, self.start_response)
+  File "falcon/app.py", line 369, in falcon.app.App.__call__
+  File "falcon/app.py", line 1030, in falcon.app.App._handle_exception
+  File "isopalavial_interface.py", line 80, in log_errors
+    raise ex
+  File "falcon/app.py", line 365, in falcon.app.App.__call__
+  File "isopalavial_interface.py", line 31, in on_put
+    location = req.json()["location"]
+AttributeError: 'Request' object has no attribute 'json'
+2023-08-22 13:14:18 [error    ] Unhandled Exception            method=PUT rid=cbfa2d8e-3c12-43e3-a91f-276bdfe7353e time=1692724458.977321 uri=/warp
+[31m╭─[0m[31m────────────────────[0m[31m [0m[1;31mTraceback [0m[1;2;31m(most recent call last)[0m[31m [0m[31m─────────────────────[0m[31m─╮[0m
+[31m│[0m in [92mfalcon.app.App.__call__[0m:[94m365[0m                                               [31m│[0m
+[31m│[0m                                                                              [31m│[0m
+[31m│[0m [2;33m/Users/nmitchell/workspace/rascal-debugging-interview/[0m[1;33misopalavial_interface.[0m [31m│[0m
+[31m│[0m [1;33mpy[0m:[94m31[0m in [92mon_put[0m                                                              [31m│[0m
+[31m│[0m                                                                              [31m│[0m
+[31m│[0m   [2m28 [0m[2m│   │   │   │   [0mdescription=[33m"[0m[33mSystem configuration invalid[0m[33m"[0m              [31m│[0m
+[31m│[0m   [2m29 [0m[2m│   │   │   [0m)                                                           [31m│[0m
+[31m│[0m   [2m30 [0m[2m│   │   [0m                                                                [31m│[0m
+[31m│[0m [31m❱ [0m31 [2m│   │   [0mlocation = req.json()[[33m"[0m[33mlocation[0m[33m"[0m]                               [31m│[0m
+[31m│[0m   [2m32 [0m[2m│   │   [0mwarp = FiromactalDriveClient(api_key, rid).warp(location)       [31m│[0m
+[31m│[0m   [2m33 [0m[2m│   │   [0m                                                                [31m│[0m
+[31m│[0m   [2m34 [0m[2m│   │   [0mresp.status = warp.status_code                                  [31m│[0m
+[31m│[0m                                                                              [31m│[0m
+[31m│[0m [33m╭─[0m[33m──────────────────────────────[0m[33m locals [0m[33m──────────────────────────────[0m[33m─╮[0m     [31m│[0m
+[31m│[0m [33m│[0m ontarian_manifold = [33m'40000'[0m                                          [33m│[0m     [31m│[0m
+[31m│[0m [33m│[0m               req = [1m<[0m[1;95mRequest:[0m[39m PUT [0m[33m'http://localhost:8000/warp'[0m[1m>[0m      [33m│[0m     [31m│[0m
+[31m│[0m [33m│[0m              resp = [1m<[0m[1;95mResponse:[0m[39m [0m[94m200[0m[39m OK[0m[1m>[0m                               [33m│[0m     [31m│[0m
+[31m│[0m [33m│[0m               rid = [33m'cbfa2d8e-3c12-43e3-a91f-276bdfe7353e'[0m           [33m│[0m     [31m│[0m
+[31m│[0m [33m│[0m              self = [1m<[0m[1;95m__main__.WarpResource[0m[39m object at [0m[94m0x7f77d407bac0[0m[1m>[0m [33m│[0m     [31m│[0m
+[31m│[0m [33m╰──────────────────────────────────────────────────────────────────────╯[0m     [31m│[0m
+[31m╰──────────────────────────────────────────────────────────────────────────────╯[0m
+[1;91mAttributeError: [0m[32m'Request'[0m object has no attribute [32m'json'[0m
+
+127.0.0.1 - - [22/Aug/2023 13:14:18] "PUT /warp HTTP/1.1" 500 59
+Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/3.8/lib/python3.8/wsgiref/handlers.py", line 137, in run
+    self.result = application(self.environ, self.start_response)
+  File "falcon/app.py", line 369, in falcon.app.App.__call__
+  File "falcon/app.py", line 1030, in falcon.app.App._handle_exception
+  File "isopalavial_interface.py", line 80, in log_errors
+    raise ex
+  File "falcon/app.py", line 365, in falcon.app.App.__call__
+  File "isopalavial_interface.py", line 31, in on_put
+    location = req.json()["location"]
+AttributeError: 'Request' object has no attribute 'json'
