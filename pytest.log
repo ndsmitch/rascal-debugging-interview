@@ -1,6 +1,6 @@
 ============================= test session starts ==============================
-platform darwin -- Python 3.8.2, pytest-7.4.0, pluggy-1.2.0
-rootdir: /Users/nmitchell/workspace/rascal-debugging-interview
+platform linux -- Python 3.8.10, pytest-7.4.0, pluggy-1.3.0
+rootdir: /home/nmitchell/workspace/rascal-debugging-interview
 collected 7 items
 
 test_rascal.py ..FFFFF                                                   [100%]
@@ -8,7 +8,7 @@ test_rascal.py ..FFFFF                                                   [100%]
 =================================== FAILURES ===================================
 ___________________________ test_diagnostic_success ____________________________
 
-rid = '50088c58-206b-4e23-b574-2a2803ec4e09'
+rid = 'cbee61f9-e1aa-4a29-8423-8c584137d9f6'
 
     def test_diagnostic_success(rid):
         headers = {
@@ -27,7 +27,7 @@ E        +  where 200 = <Response [200]>.status_code
 test_rascal.py:50: AssertionError
 ______________________________ test_cool_success _______________________________
 
-rid = '562c662e-7dbd-4237-aa28-08e33a9b1b55'
+rid = 'a2cf7223-ac5a-435e-8fc1-271695bf6012'
 
     def test_cool_success(rid):
         # Send cool command
@@ -47,7 +47,7 @@ E        +  where 405 = <Response [405]>.status_code
 test_rascal.py:69: AssertionError
 __________________________ test_warp_and_cool_success __________________________
 
-rid = 'efcc5dc6-564c-46f3-83f3-36ae9c63f8b9'
+rid = 'a1f76780-3e77-4b7f-9c23-660d9e3efab3'
 
     def test_warp_and_cool_success(rid):
         # Send warp command
@@ -68,7 +68,7 @@ E        +  where 500 = <Response [500]>.status_code
 test_rascal.py:85: AssertionError
 _____________________________ test_multiwarp_fail ______________________________
 
-rid = '57c599a4-291c-4c14-baeb-86c551578b36'
+rid = '778e17ca-5fca-48b2-9364-5e47135de2ab'
 
     def test_multiwarp_fail(rid):
         # Send warp command
@@ -89,7 +89,7 @@ E        +  where 500 = <Response [500]>.status_code
 test_rascal.py:145: AssertionError
 ___________________________ test_multi_warp_success ____________________________
 
-rid = 'cbfa2d8e-3c12-43e3-a91f-276bdfe7353e'
+rid = 'cc9bbc77-0577-4ae6-9405-c6e4791fc78e'
 
     def test_multi_warp_success(rid):
         # Send warp command
@@ -114,4 +114,4 @@ FAILED test_rascal.py::test_cool_success - assert 405 == 200
 FAILED test_rascal.py::test_warp_and_cool_success - assert 500 == 200
 FAILED test_rascal.py::test_multiwarp_fail - assert 500 == 200
 FAILED test_rascal.py::test_multi_warp_success - assert 500 == 200
-========================= 5 failed, 2 passed in 0.45s ==========================
+========================= 5 failed, 2 passed in 0.17s ==========================

@@ -21,4 +21,3 @@ python -m pip install falcon==3.1.1
 python -m pip install requests==2.31.0
 python -m pip install structlog==23.1.0
 python -m pip install pytest==7.4.0
-python -m pip install rich==13.5.2

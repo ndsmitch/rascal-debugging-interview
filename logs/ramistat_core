@@ -1,58 +1,21 @@
-2023-08-22 13:14:12 [info     ] Booting up the Ramistat Core
-2023-08-22 13:14:17 [info     ] Serving on port 8222...
-2023-08-22 13:14:18 [info     ] {"reqHeaders": {"CONTENT-LENGTH": "", "CONTENT-TYPE": "application/x-www-form-urlencoded", "HOST": "localhost:8222", "USER-AGENT": "curl/7.87.0", "X-REQUEST-ID": "healthcheck", "ACCEPT": "text/plain"}, "reqMedia": {}, "status": "200 OK"} method=GET rid=healthcheck time=1692724458.2462678 uri=/healthcheck
-2023-08-22 13:14:18 [error    ] Unhandled Exception            method=GET rid=be6f44d2-a81b-44bc-8304-50f4663cc947 time=1692724458.7545652 uri=/diagnostic
-[31m╭─[0m[31m────────────────────[0m[31m [0m[1;31mTraceback [0m[1;2;31m(most recent call last)[0m[31m [0m[31m─────────────────────[0m[31m─╮[0m
-[31m│[0m in [92mfalcon.app.App.__call__[0m:[94m365[0m                                               [31m│[0m
-[31m│[0m                                                                              [31m│[0m
-[31m│[0m [2;33m/Users/nmitchell/workspace/rascal-debugging-interview/[0m[1;33mramistat_core.py[0m:[94m36[0m in [31m│[0m
-[31m│[0m [92mon_get[0m                                                                       [31m│[0m
-[31m│[0m                                                                              [31m│[0m
-[31m│[0m   [2m33 [0m[2m│   │   [0mapi_key = environ[[33m"[0m[33mAPI_KEY[0m[33m"[0m]                                    [31m│[0m
-[31m│[0m   [2m34 [0m[2m│   │   [0mheader_key = req.get_header([33m"[0m[33mX-API-Key[0m[33m"[0m)                        [31m│[0m
-[31m│[0m   [2m35 [0m[2m│   │   [0m[94mif[0m header_key != api_key:                                       [31m│[0m
-[31m│[0m [31m❱ [0m36 [2m│   │   │   [0m[94mraise[0m falcon.HTTPUnauthorized(description=[33m"[0m[33mInvalid API key[0m[33m"[0m [31m│[0m
-[31m│[0m   [2m37 [0m[2m│   │   [0m                                                                [31m│[0m
-[31m│[0m   [2m38 [0m[2m│   │   [0m[94mwith[0m [96mopen[0m(Config.OntarianManifold.path, [33m"[0m[33mr[0m[33m"[0m) [94mas[0m manifold_file:  [31m│[0m
-[31m│[0m   [2m39 [0m[2m│   │   │   [0montarian_manifold = manifold_file.read().splitlines()[-[94m1[0m]   [31m│[0m
-[31m│[0m                                                                              [31m│[0m
-[31m│[0m [33m╭─[0m[33m─────────────────────────────[0m[33m locals [0m[33m──────────────────────────────[0m[33m─╮[0m      [31m│[0m
-[31m│[0m [33m│[0m    api_key = [33m'11699429-2E44-4D26-9118-051E464FB0CA'[0m                 [33m│[0m      [31m│[0m
-[31m│[0m [33m│[0m header_key = [94mNone[0m                                                   [33m│[0m      [31m│[0m
-[31m│[0m [33m│[0m        req = [1m<[0m[1;95mRequest:[0m[39m GET [0m[33m'http://localhost:8222/diagnostic'[0m[1m>[0m      [33m│[0m      [31m│[0m
-[31m│[0m [33m│[0m       resp = [1m<[0m[1;95mResponse:[0m[39m [0m[94m200[0m[39m OK[0m[1m>[0m                                     [33m│[0m      [31m│[0m
-[31m│[0m [33m│[0m       self = [1m<[0m[1;95m__main__.DiagnosticResource[0m[39m object at [0m[94m0x7fe608768a00[0m[1m>[0m [33m│[0m      [31m│[0m
-[31m│[0m [33m╰─────────────────────────────────────────────────────────────────────╯[0m      [31m│[0m
-[31m╰──────────────────────────────────────────────────────────────────────────────╯[0m
-[1;91mHTTPUnauthorized: [0m[1m<[0m[1;95mHTTPUnauthorized:[0m[39m [0m[1;36m401[0m[39m Unauthorized[0m[1m>[0m
-
-2023-08-22 13:14:18 [error    ] {"reqHeaders": {"CONTENT-LENGTH": "", "CONTENT-TYPE": "application/x-www-form-urlencoded", "HOST": "localhost:8222", "USER-AGENT": "python-requests/2.31.0", "ACCEPT-ENCODING": "gzip, deflate", "ACCEPT": "text/plain", "CONNECTION": "keep-alive", "X-REQUEST-ID": "be6f44d2-a81b-44bc-8304-50f4663cc947"}, "reqMedia": {}, "status": "401 Unauthorized"} method=GET rid=be6f44d2-a81b-44bc-8304-50f4663cc947 time=1692724458.7545652 uri=/diagnostic
-2023-08-22 13:14:18 [info     ] {"reqHeaders": {"CONTENT-LENGTH": "", "CONTENT-TYPE": "application/x-www-form-urlencoded", "HOST": "localhost:8222", "USER-AGENT": "python-requests/2.31.0", "ACCEPT-ENCODING": "gzip, deflate", "ACCEPT": "text/plain", "CONNECTION": "keep-alive", "X-API-KEY": "11699429-2E44-4D26-9118-051E464FB0CA", "X-REQUEST-ID": "50088c58-206b-4e23-b574-2a2803ec4e09"}, "reqMedia": {}, "status": "200 OK"} method=GET rid=50088c58-206b-4e23-b574-2a2803ec4e09 time=1692724458.843533 uri=/diagnostic
-2023-08-22 13:14:18 [error    ] Unhandled Exception            method=PUT rid=562c662e-7dbd-4237-aa28-08e33a9b1b55 time=1692724458.89016 uri=/cool
-[31m╭─[0m[31m────────────────────[0m[31m [0m[1;31mTraceback [0m[1;2;31m(most recent call last)[0m[31m [0m[31m─────────────────────[0m[31m─╮[0m
-[31m│[0m in [92mfalcon.app.App.__call__[0m:[94m365[0m                                               [31m│[0m
-[31m│[0m                                                                              [31m│[0m
-[31m│[0m [2;33m/Users/nmitchell/workspace/rascal-debugging-interview/venv/lib/python3.8/sit[0m [31m│[0m
-[31m│[0m [2;33me-packages/falcon/[0m[1;33mresponders.py[0m:[94m61[0m in [92mmethod_not_allowed[0m                     [31m│[0m
-[31m│[0m                                                                              [31m│[0m
-[31m│[0m   [2m58 [0m[2m│   │   [0m[94mreturn[0m method_not_allowed_responder_async                       [31m│[0m
-[31m│[0m   [2m59 [0m[2m│   [0m                                                                    [31m│[0m
-[31m│[0m   [2m60 [0m[2m│   [0m[94mdef[0m [92mmethod_not_allowed[0m(req, resp, **kwargs):                        [31m│[0m
-[31m│[0m [31m❱ [0m61 [2m│   │   [0m[94mraise[0m HTTPMethodNotAllowed(allowed_methods)                     [31m│[0m
-[31m│[0m   [2m62 [0m[2m│   [0m                                                                    [31m│[0m
-[31m│[0m   [2m63 [0m[2m│   [0m[94mreturn[0m method_not_allowed                                           [31m│[0m
-[31m│[0m   [2m64 [0m                                                                        [31m│[0m
-[31m│[0m                                                                              [31m│[0m
-[31m│[0m [33m╭─[0m[33m──────────────────────────[0m[33m locals [0m[33m───────────────────────────[0m[33m─╮[0m            [31m│[0m
-[31m│[0m [33m│[0m allowed_methods = [1m[[0m[33m'POST'[0m, [33m'OPTIONS'[0m[1m][0m                         [33m│[0m            [31m│[0m
-[31m│[0m [33m│[0m          kwargs = [1m{[0m[1m}[0m                                          [33m│[0m            [31m│[0m
-[31m│[0m [33m│[0m             req = [1m<[0m[1;95mRequest:[0m[39m PUT [0m[33m'http://localhost:8222/cool'[0m[1m>[0m [33m│[0m            [31m│[0m
-[31m│[0m [33m│[0m            resp = [1m<[0m[1;95mResponse:[0m[39m [0m[94m200[0m[39m OK[0m[1m>[0m                          [33m│[0m            [31m│[0m
-[31m│[0m [33m╰───────────────────────────────────────────────────────────────╯[0m            [31m│[0m
-[31m╰──────────────────────────────────────────────────────────────────────────────╯[0m
-[1;91mHTTPMethodNotAllowed: [0m[1m<[0m[1;95mHTTPMethodNotAllowed:[0m[39m [0m[1;36m405[0m[39m Method Not Allowed[0m[1m>[0m
-
-2023-08-22 13:14:18 [error    ] {"reqHeaders": {"CONTENT-LENGTH": "0", "CONTENT-TYPE": "application/x-www-form-urlencoded", "HOST": "localhost:8222", "USER-AGENT": "python-requests/2.31.0", "ACCEPT-ENCODING": "gzip, deflate", "ACCEPT": "text/plain", "CONNECTION": "keep-alive", "X-API-KEY": "11699429-2E44-4D26-9118-051E464FB0CA", "X-REQUEST-ID": "562c662e-7dbd-4237-aa28-08e33a9b1b55"}, "reqMedia": {}, "status": "405 Method Not Allowed"} method=PUT rid=562c662e-7dbd-4237-aa28-08e33a9b1b55 time=1692724458.89016 uri=/cool
-2023-08-22 13:14:18 [info     ] {"reqHeaders": {"CONTENT-LENGTH": "", "CONTENT-TYPE": "application/x-www-form-urlencoded", "HOST": "localhost:8222", "USER-AGENT": "python-requests/2.31.0", "ACCEPT-ENCODING": "gzip, deflate", "ACCEPT": "text/plain", "CONNECTION": "keep-alive", "X-API-KEY": "11699429-2E44-4D26-9118-051E464FB0CA", "X-REQUEST-ID": "efcc5dc6-564c-46f3-83f3-36ae9c63f8b9"}, "reqMedia": {}, "status": "200 OK"} method=GET rid=efcc5dc6-564c-46f3-83f3-36ae9c63f8b9 time=1692724458.924414 uri=/diagnostic
-2023-08-22 13:14:18 [info     ] {"reqHeaders": {"CONTENT-LENGTH": "", "CONTENT-TYPE": "application/x-www-form-urlencoded", "HOST": "localhost:8222", "USER-AGENT": "python-requests/2.31.0", "ACCEPT-ENCODING": "gzip, deflate", "ACCEPT": "text/plain", "CONNECTION": "keep-alive", "X-API-KEY": "11699429-2E44-4D26-9118-051E464FB0CA", "X-REQUEST-ID": "57c599a4-291c-4c14-baeb-86c551578b36"}, "reqMedia": {}, "status": "200 OK"} method=GET rid=57c599a4-291c-4c14-baeb-86c551578b36 time=1692724458.9529228 uri=/diagnostic
-2023-08-22 13:14:18 [info     ] {"reqHeaders": {"CONTENT-LENGTH": "", "CONTENT-TYPE": "application/x-www-form-urlencoded", "HOST": "localhost:8222", "USER-AGENT": "python-requests/2.31.0", "ACCEPT-ENCODING": "gzip, deflate", "ACCEPT": "text/plain", "CONNECTION": "keep-alive", "X-API-KEY": "11699429-2E44-4D26-9118-051E464FB0CA", "X-REQUEST-ID": "cbfa2d8e-3c12-43e3-a91f-276bdfe7353e"}, "reqMedia": {}, "status": "200 OK"} method=GET rid=cbfa2d8e-3c12-43e3-a91f-276bdfe7353e time=1692724458.98064 uri=/diagnostic
+2023-10-12 22:45:09 [info     ] Booting up the Ramistat Core
+2023-10-12 22:45:09 [info     ] Serving on port 8222...
+2023-10-12 22:45:10 [info     ] {"reqHeaders": {"CONTENT-LENGTH": "", "CONTENT-TYPE": "application/x-www-form-urlencoded", "HOST": "localhost:8222", "USER-AGENT": "curl/7.68.0", "X-REQUEST-ID": "healthcheck", "ACCEPT": "text/plain"}, "reqMedia": {}, "status": "200 OK"} method=GET rid=healthcheck time=1697165110.08155 uri=/healthcheck
+2023-10-12 22:45:10 [error    ] Unhandled Exception            method=GET rid=e623d2a0-f8cf-4f6e-83d3-71b8a3e59dde time=1697165110.453874 uri=/diagnostic
+Traceback (most recent call last):
+  File "falcon/app.py", line 365, in falcon.app.App.__call__
+  File "ramistat_core.py", line 36, in on_get
+    raise falcon.HTTPUnauthorized(description="Invalid API key")
+falcon.errors.HTTPUnauthorized: <HTTPUnauthorized: 401 Unauthorized>
+2023-10-12 22:45:10 [error    ] {"reqHeaders": {"CONTENT-LENGTH": "", "CONTENT-TYPE": "application/x-www-form-urlencoded", "HOST": "localhost:8222", "USER-AGENT": "python-requests/2.31.0", "ACCEPT-ENCODING": "gzip, deflate", "ACCEPT": "text/plain", "CONNECTION": "keep-alive", "X-REQUEST-ID": "e623d2a0-f8cf-4f6e-83d3-71b8a3e59dde"}, "reqMedia": {}, "status": "401 Unauthorized"} method=GET rid=e623d2a0-f8cf-4f6e-83d3-71b8a3e59dde time=1697165110.453874 uri=/diagnostic
+2023-10-12 22:45:10 [info     ] {"reqHeaders": {"CONTENT-LENGTH": "", "CONTENT-TYPE": "application/x-www-form-urlencoded", "HOST": "localhost:8222", "USER-AGENT": "python-requests/2.31.0", "ACCEPT-ENCODING": "gzip, deflate", "ACCEPT": "text/plain", "CONNECTION": "keep-alive", "X-API-KEY": "18d8d05f-27f1-428f-b4ef-1408ec74e645", "X-REQUEST-ID": "cbee61f9-e1aa-4a29-8423-8c584137d9f6"}, "reqMedia": {}, "status": "200 OK"} method=GET rid=cbee61f9-e1aa-4a29-8423-8c584137d9f6 time=1697165110.4623034 uri=/diagnostic
+2023-10-12 22:45:10 [error    ] Unhandled Exception            method=PUT rid=a2cf7223-ac5a-435e-8fc1-271695bf6012 time=1697165110.4915082 uri=/cool
+Traceback (most recent call last):
+  File "falcon/app.py", line 365, in falcon.app.App.__call__
+  File "/home/nmitchell/workspace/rascal-debugging-interview/venv/lib/python3.8/site-packages/falcon/responders.py", line 61, in method_not_allowed
+    raise HTTPMethodNotAllowed(allowed_methods)
+falcon.errors.HTTPMethodNotAllowed: <HTTPMethodNotAllowed: 405 Method Not Allowed>
+2023-10-12 22:45:10 [error    ] {"reqHeaders": {"CONTENT-LENGTH": "0", "CONTENT-TYPE": "application/x-www-form-urlencoded", "HOST": "localhost:8222", "USER-AGENT": "python-requests/2.31.0", "ACCEPT-ENCODING": "gzip, deflate", "ACCEPT": "text/plain", "CONNECTION": "keep-alive", "X-API-KEY": "18d8d05f-27f1-428f-b4ef-1408ec74e645", "X-REQUEST-ID": "a2cf7223-ac5a-435e-8fc1-271695bf6012"}, "reqMedia": {}, "status": "405 Method Not Allowed"} method=PUT rid=a2cf7223-ac5a-435e-8fc1-271695bf6012 time=1697165110.4915082 uri=/cool
+2023-10-12 22:45:10 [info     ] {"reqHeaders": {"CONTENT-LENGTH": "", "CONTENT-TYPE": "application/x-www-form-urlencoded", "HOST": "localhost:8222", "USER-AGENT": "python-requests/2.31.0", "ACCEPT-ENCODING": "gzip, deflate", "ACCEPT": "text/plain", "CONNECTION": "keep-alive", "X-API-KEY": "18d8d05f-27f1-428f-b4ef-1408ec74e645", "X-REQUEST-ID": "a1f76780-3e77-4b7f-9c23-660d9e3efab3"}, "reqMedia": {}, "status": "200 OK"} method=GET rid=a1f76780-3e77-4b7f-9c23-660d9e3efab3 time=1697165110.499543 uri=/diagnostic
+2023-10-12 22:45:10 [info     ] {"reqHeaders": {"CONTENT-LENGTH": "", "CONTENT-TYPE": "application/x-www-form-urlencoded", "HOST": "localhost:8222", "USER-AGENT": "python-requests/2.31.0", "ACCEPT-ENCODING": "gzip, deflate", "ACCEPT": "text/plain", "CONNECTION": "keep-alive", "X-API-KEY": "18d8d05f-27f1-428f-b4ef-1408ec74e645", "X-REQUEST-ID": "778e17ca-5fca-48b2-9364-5e47135de2ab"}, "reqMedia": {}, "status": "200 OK"} method=GET rid=778e17ca-5fca-48b2-9364-5e47135de2ab time=1697165110.5083532 uri=/diagnostic
+2023-10-12 22:45:10 [info     ] {"reqHeaders": {"CONTENT-LENGTH": "", "CONTENT-TYPE": "application/x-www-form-urlencoded", "HOST": "localhost:8222", "USER-AGENT": "python-requests/2.31.0", "ACCEPT-ENCODING": "gzip, deflate", "ACCEPT": "text/plain", "CONNECTION": "keep-alive", "X-API-KEY": "18d8d05f-27f1-428f-b4ef-1408ec74e645", "X-REQUEST-ID": "cc9bbc77-0577-4ae6-9405-c6e4791fc78e"}, "reqMedia": {}, "status": "200 OK"} method=GET rid=cc9bbc77-0577-4ae6-9405-c6e4791fc78e time=1697165110.5167584 uri=/diagnostic
